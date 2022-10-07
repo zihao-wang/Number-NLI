@@ -1,0 +1,38 @@
+dataset_params:
+  dev_dataset:
+    batch_size: 8
+    filename_list:
+    - dataset/AWPNLI-cv-10-replica-6/dev.jsonl
+    num_labels: 3
+    shuffle: false
+  test_dataset:
+    batch_size: 8
+    filename_list:
+    - dataset/AWPNLI-cv-10-replica-6/test.jsonl
+    num_labels: 3
+    shuffle: false
+  train_dataset:
+    batch_size: 16
+    filename_list:
+    - dataset/AWPNLI-cv-10-replica-6/train.jsonl
+    num_labels: 3
+    shuffle: true
+learning_params:
+  eval_every: 200
+  eval_routine_type: NLI
+  max_global_steps: 25000
+  optimizer_name: Adam
+  optimizer_params:
+    lr: 1e-5
+  save_every: 1000
+  train_step_type: NLI
+model_params:
+  model_name: shared_encoder_3way
+recorder_params:
+  names:
+  - train_info
+  - train_badcase
+  - dev_badcase
+  - dev_info
+  - test_badcase
+  - test_info

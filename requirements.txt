@@ -1,0 +1,5 @@
+tqdm
+pandas
+spacy
+transformers
+torch
