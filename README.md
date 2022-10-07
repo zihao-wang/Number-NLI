@@ -1,11 +1,10 @@
 # Neural Symbolic Number Reasoning for Natural Language Inference
 
-NLI task implementation for paper
-[A Neural-Symbolic Approach to Natural Language Understanding
-](https://arxiv.org/abs/2203.10557)
+AWPNLI task implementation for paper [A Neural-Symbolic Approach to Natural Language Understanding](https://arxiv.org/abs/2203.10557)
 
 ## Usage
 
+0. install the dependencies in `requirement.txt`
 1. install the spacy small en language model.
 2. split the labeled AWP dataset, see `labeled_data/AWPNLI.jsonl`
 ```
@@ -29,3 +28,16 @@ Step 2-4 can also be found in `run.sh` file
 - `{bart/roberta}_cls_3way`: neural NLI classifier
 - `bart_forms_3way`: symbolic execution
 - `shared_encoder_3way`: neural symbolic with shared encoder
+
+
+## Bibliography
+
+If our work inspires you, please cite
+```
+@inproceedings{liu2022a,
+  title={A Neural-Symbolic Approach to Natural Language Understanding},
+  author={Liu, Zhixuan and Wang, Zihao and Lin, Yuan and Li, Hang},
+  booktitle={Findings of the Association for Computational Linguistics: EMNLP 2022},
+  year={2022}
+}
+```
