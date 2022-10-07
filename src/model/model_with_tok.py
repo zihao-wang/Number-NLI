@@ -520,15 +520,15 @@ def get_model_with_tok(model_name, init_ckpt=None, pretrain_ckpt=None, device='c
 
     if model_name == "bart_cls":
         if pretrain_ckpt is None:
-            pretrain_ckpt = "ckpt_lm/bart-large-mnli"
+            pretrain_ckpt = "facebook/bart-large-mnli"
         model = BART_CLS(pretrain_ckpt, **kwargs)
     elif model_name == "roberta_cls":
         if pretrain_ckpt is None:
-            pretrain_ckpt = "ckpt_lm/roberta-large-mnli"
+            pretrain_ckpt = "roberta-large-mnli"
         model = RoBERTa_CLS(pretrain_ckpt, **kwargs)
     elif model_name == "bart_forms":
         if pretrain_ckpt is None:
-            pretrain_ckpt = "ckpt_lm/bart-large"
+            pretrain_ckpt = "facebook/bart-large"
         model = BART_FORMS(pretrain_ckpt, **kwargs)
     else:
         raise NotImplementedError("Not Implemented Models")

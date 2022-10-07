@@ -14,6 +14,8 @@ parser.add_argument("--num_replica", type=int)
 parser.add_argument("--mode", type=str, default='no-action',
                     help="cv-10 or tdt-8-1-1")
 
+os.makedirs('log', exist_ok=True)
+
 logging.basicConfig(filename='log/split_dataset.log',
                     filemode="wt",
                     level=logging.INFO)

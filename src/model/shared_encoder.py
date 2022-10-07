@@ -238,12 +238,12 @@ class MultiTaskTransformer(PreTrainedModel):
                task_params_dict={
                    'nlicls': {
                        'model_type': 'BartForSequenceClassification',
-                       'pretrain_ckpt': 'ckpt_lm/bart-large-mnli',
+                       'pretrain_ckpt': 'facebook/bart-large-mnli',
                        'task_model': 'SequenceClassifier'
                    },
                    'formgen_e': {
                        'model_type': 'BartForConditionalGeneration',
-                       'pretrain_ckpt': 'ckpt_lm/bart-large',
+                       'pretrain_ckpt': 'facebook/bart-large',
                        'task_model': 'SequenceGenerator',
                        'task_model_params': {
                            'target_key': 'elisp'
@@ -252,7 +252,7 @@ class MultiTaskTransformer(PreTrainedModel):
                    },
                    'formgen_c': {
                        'model_type': 'BartForConditionalGeneration',
-                       'pretrain_ckpt': 'ckpt_lm/bart-large',
+                       'pretrain_ckpt': 'facebook/bart-large',
                        'task_model': 'SequenceGenerator',
                        'task_model_params': {
                            'target_key': 'clisp'
@@ -272,7 +272,7 @@ class MultiTaskTransformer(PreTrainedModel):
         loss_contribution = {}
         # get tokenizer
         tokenizer = BartTokenizer.from_pretrained(
-            'ckpt_lm/bart-large', additional_special_tokens=additional_special_tokens)
+            'facebook/bart-large', additional_special_tokens=additional_special_tokens)
 
         # create the encoders
         for task_name, task_params in task_params_dict.items():
