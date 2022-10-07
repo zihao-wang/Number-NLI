@@ -35,7 +35,6 @@ Step 2-4 can also be found in `run.sh` file
 If our work inspires you, please cite
 ```
 @inproceedings{liu2022a,
-  abbr={Findings-EMNLP},
   title={A Neural-Symbolic Approach to Natural Language Understanding},
   author={Liu, Zhixuan and Wang, Zihao and Lin, Yuan and Li, Hang},
   booktitle={Findings of the Association for Computational Linguistics: EMNLP 2022},
